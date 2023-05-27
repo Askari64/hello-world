@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Data from "./AccordionData";
+import './Accordion.css'
 
 function AccordionMeta({ data }) {
   const [open, setOpen] = useState(false);
