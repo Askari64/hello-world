@@ -1,38 +1,36 @@
-import React from 'react'
-import { useState } from 'react'
-import './WordCounter.css'
+import React from "react";
+import { useState } from "react";
+import "./WordCounter.css";
+
+const countWords = (text) => {
+  const words = text.trim().split(/\s+/);
+  if (text.trim() === "") {
+    return 0;
+  }
+  return words.length;
+};
 
 function WordCounter() {
+  const [text, setText] = useState("");
 
-    const [text , setText] = useState('');
+  const handleChange = (e) => {
+    setText(e.target.value);
+  };
 
-    
-
-    function handleChange(e) {
-        setText(e.target.value)
-    }
-
-    const countWords = () => {
-        
-       const words = text.trim().split(/\s+/);
-       if (text.trim() === '') {
-        return 0;
-       }
-       return words.length;
-    }
+  const WordCount = countWords(text);
 
   return (
     <div className="word-counter-container">
-    <h1 className="title">WordCounter</h1>
-    <textarea className="text-area" onChange={handleChange} />
-    <br/><br/>
-    <p className="word-count"> Current Word Count: {countWords()}</p>
+      <h1 className="title">WordCounter</h1>
+      <textarea className="text-area" onChange={handleChange} />
+      <br />
+      <br />
+      <p className="word-count"> Current Word Count: {WordCount}</p>
     </div>
-  )
+  );
 }
 
-export default WordCounter
-
+export default WordCounter;
 
 /* Main logic lies here 
 
