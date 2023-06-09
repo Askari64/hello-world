@@ -1,4 +1,3 @@
-import React from "react";
 import { useState , useEffect} from "react";
 
 function Timer() {
@@ -6,11 +5,11 @@ function Timer() {
     const [count, setCount] = useState(0);
 
      useEffect(() => {
-        setTimeout(() => {
+        const timer = setTimeout(() => {
             setCount((count) => count+1);
         },1000);
         return() => {
-            clearTimeout(Timer);
+            clearTimeout(timer);
         };
     
     },[]);
