@@ -9,10 +9,10 @@ function Timer() {
             setCount((count) => count+1);
         },1000);
         return() => {
-            clearTimeout(timer);  // clearTimeout(timer) to unmount and to prevent memory leaks.
+            clearTimeout(timer);  // clearTimeout(timer) to unmount and to prevent memory leaks. (This wont work cuz there is no stop condition at the moment)
         };   
     
-    },[]); // empty array '[]' dependency runs the effect only on first render
+    },[count]); // effect runs every second because count updates every second
 
     const HandleClick = (e) => {
         setCount(0);
