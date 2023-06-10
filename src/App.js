@@ -23,14 +23,16 @@ import ShowAccordion from './components/Hooks/useState/Accordion/Accordion2';
 import TodoList from './components/Hooks/useState/Todo List/Todo';
 import WordCounter from './components/Hooks/useState/WordCounter.js/WordCounter';
 import Timer from './components/Hooks/useEffect/Timer';
+import FetchApi from './components/Hooks/useEffect/FetchApi';
 
 function App() {
   return (
     <div className="App">
-    <Timer/>
+    <FetchApi/>
     
      { 
       /*
+      <Timer/>
       <WordCounter/>
       <TodoList/>
         <ShowAccordion/>
