@@ -3,7 +3,7 @@ import axios from "axios";
 
 function FetchApi() {
   const [post, setPost] = useState({}); //for saving and displaying get request data
-  const [ApiId, setApiId] = useState(0); // for RNG and passing as dependency
+  const [apiId, setApiId] = useState(0); // for RNG and passing as dependency
 
   const handleClick = () =>{
   setApiId(Math.ceil(Math.random()* 100));
@@ -11,7 +11,7 @@ function FetchApi() {
 
   useEffect(() => {
     axios
-      .get(`https://jsonplaceholder.typicode.com/posts/${ApiId}`) //get request
+      .get(`https://jsonplaceholder.typicode.com/posts/${apiId}`) //get request
       .then((res) => {
         console.log(res);
         setPost(res.data); //saving data for resolve "res" to posts
@@ -19,7 +19,7 @@ function FetchApi() {
       .catch((err) => {
         console.log(err);
       });
-  }, [ApiId]);
+  }, [apiId]);
 
   return (
     
