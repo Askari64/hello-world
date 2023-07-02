@@ -6,7 +6,7 @@ function Context3() {
     const middleName = useContext(middleNameContext);
     const lastName = useContext(lastNameContext);
 
-    let name = firstName + middleName + lastName;
+    let name = `${firstName} ${middleName} ${lastName}`
   return (
     <div>Name - {name}  </div>
   )
