@@ -26,14 +26,16 @@ import Timer from './components/Hooks/useEffect/Timer';
 import FetchApi from './components/Hooks/useEffect/FetchApi';
 import ContextApp from './components/Hooks/useContext/ContextApp';
 import Parent from './components/Hooks/useCallback/Parent';
+import CounterMemo from './components/Hooks/useMemo/CounterMemo';
 
 
 function App() {
   return (
     <div className="App">
-    <Parent/>
+    <CounterMemo/>
     {
       /*
+      <Parent/>
       <ContextApp/>
       <FetchApi/>
       <Timer/>
