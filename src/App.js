@@ -25,15 +25,16 @@ import WordCounter from './components/Hooks/useState/WordCounter.js/WordCounter'
 import Timer from './components/Hooks/useEffect/Timer';
 import FetchApi from './components/Hooks/useEffect/FetchApi';
 import ContextApp from './components/Hooks/useContext/ContextApp';
+import Parent from './components/Hooks/useCallback/Parent';
+
 
 function App() {
   return (
     <div className="App">
-    
-    <ContextApp/>
-    
-     { 
+    <Parent/>
+    {
       /*
+      <ContextApp/>
       <FetchApi/>
       <Timer/>
       <WordCounter/>
