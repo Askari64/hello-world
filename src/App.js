@@ -27,14 +27,16 @@ import FetchApi from './components/Hooks/useEffect/FetchApi';
 import ContextApp from './components/Hooks/useContext/ContextApp';
 import Parent from './components/Hooks/useCallback/Parent';
 import CounterMemo from './components/Hooks/useMemo/CounterMemo';
+import RefTimer from './components/Hooks/useRef/RefTimer';
 
 
 function App() {
   return (
     <div className="App">
-    <CounterMemo/>
+    <RefTimer/>
     {
       /*
+      <CounterMemo/>
       <Parent/>
       <ContextApp/>
       <FetchApi/>
